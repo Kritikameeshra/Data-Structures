@@ -16,8 +16,6 @@ struct Node
 
 // } Driver Code Ends
 
-
-
 class Solution{
     public:
     Node* deleteMid(Node* head)
