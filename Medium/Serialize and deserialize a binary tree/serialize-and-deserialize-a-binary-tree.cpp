@@ -81,7 +81,6 @@ Node *buildTree(string str) {
 
 // } Driver Code Ends
 
-
 class Solution {
 public:
     void inorder(Node* root, vector<int>& v) {
