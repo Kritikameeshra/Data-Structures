@@ -33,7 +33,6 @@ void preOrder(Node* node) {
 
 // } Driver Code Ends
 
-
 class Solution {
 public:
     // Recursive function to construct a binary tree from inorder and postorder traversals
