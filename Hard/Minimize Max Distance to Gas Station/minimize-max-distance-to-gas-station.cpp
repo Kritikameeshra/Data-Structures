@@ -5,7 +5,6 @@ using namespace std;
 
 // } Driver Code Ends
 
-
 class Solution {
   public:
     double findSmallestMaxDist(vector<int> &stations, int k) 
