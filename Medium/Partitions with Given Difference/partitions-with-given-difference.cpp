@@ -4,7 +4,6 @@ using namespace std;
 
 // } Driver Code Ends
 
-
 class Solution {
   public:
   int mod= 1e9+7;
