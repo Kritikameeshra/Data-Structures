@@ -5,7 +5,6 @@ using namespace std;
 
 // } Driver Code Ends
 
-
 class Solution {
 public:
     int findMinCost(string s1, string s2, int a, int b) 
