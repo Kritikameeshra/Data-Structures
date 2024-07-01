@@ -65,8 +65,8 @@ void reverses(Node **head) {
 
 
 // } Driver Code Ends
-class Solution {
 
+class Solution {
   public:
     void convert(Node *head, TreeNode *&root) {
         vector<TreeNode *> vec;
