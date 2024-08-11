@@ -47,8 +47,7 @@ class Solution
             }
         }
         return {day,profit};
-    } 
-};
+    } };
 
 //{ Driver Code Starts.
 // Driver program to test methods 
