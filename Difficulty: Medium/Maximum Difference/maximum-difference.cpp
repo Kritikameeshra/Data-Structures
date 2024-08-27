@@ -6,6 +6,7 @@ using namespace std;
 // } Driver Code Ends
 
 
+
 class Solution {
   public:
     void rightSmaller(vector<int> &arr, vector<int> &rs, int n){
