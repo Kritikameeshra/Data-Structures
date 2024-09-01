@@ -6,7 +6,6 @@ using namespace std;
 // } Driver Code Ends
 
 
-
 class Solution {
   public:
     int maxPathSum(vector<int> &arr1, vector<int> &arr2) {
