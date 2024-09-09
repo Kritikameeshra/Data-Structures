@@ -20,7 +20,7 @@ class Solution {
                 end--;
             }
         }
-     }
+    }
 };
 
 //{ Driver Code Starts.
