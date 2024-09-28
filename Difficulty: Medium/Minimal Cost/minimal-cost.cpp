@@ -6,7 +6,6 @@ using namespace std;
 // } Driver Code Ends
 
 
-
 class Solution {
   public:
     int minimizeCost(int k, vector<int>& arr) {
