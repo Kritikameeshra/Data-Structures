@@ -22,7 +22,6 @@ class DLLNode {
 // } Driver Code Ends
 // User function Template for C++
 
-
 class Solution {
   public:
     // function to sort a k sorted doubly linked list
