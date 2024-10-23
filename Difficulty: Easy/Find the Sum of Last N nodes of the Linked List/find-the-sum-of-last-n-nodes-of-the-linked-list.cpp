@@ -14,7 +14,6 @@ struct Node {
 
 
 // } Driver Code Ends
-
 class Solution {
   public:
     /*Structure of the node of the linled list is as
