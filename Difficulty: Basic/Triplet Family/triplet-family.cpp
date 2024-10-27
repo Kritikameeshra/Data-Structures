@@ -4,8 +4,6 @@ using namespace std;
 
 
 // } Driver Code Ends
-
-
 class Solution {
   public:
     bool findTriplet(vector<int>& arr) {
