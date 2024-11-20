@@ -4,8 +4,6 @@ using namespace std;
 
 
 // } Driver Code Ends
-
-
 class Solution {
   public:
     // Function to find the majority elements in the array
