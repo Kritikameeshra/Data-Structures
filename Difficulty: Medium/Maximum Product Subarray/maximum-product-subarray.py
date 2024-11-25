@@ -31,7 +31,6 @@ class Solution:
             i += 1
         return max_
 
-
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
