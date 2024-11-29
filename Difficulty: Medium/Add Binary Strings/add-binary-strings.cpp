@@ -30,7 +30,9 @@ class Solution {
     }
     result.erase(0,count++);
     return result;
-  }
+}
+
+
 };
 
 //{ Driver Code Starts.
