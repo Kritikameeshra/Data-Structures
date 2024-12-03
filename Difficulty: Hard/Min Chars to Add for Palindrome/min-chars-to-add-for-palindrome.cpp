@@ -8,6 +8,7 @@ using namespace std;
 // } Driver Code Ends
 
 
+
 class Solution {
 public:
     int minChar(string& s) {
