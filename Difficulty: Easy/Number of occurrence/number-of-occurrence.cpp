@@ -8,7 +8,6 @@ using namespace std;
 // } Driver Code Ends
 
 
-
 class Solution {
     // Find left Most index 
    int Binary_search_left(vector<int>& arr, int &key,int &n){
