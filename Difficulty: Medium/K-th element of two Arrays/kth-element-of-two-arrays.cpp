@@ -8,27 +8,17 @@ using namespace std;
 
 class Solution {
   public:
-    int kthElement(int k, vector<int>& arr1, vector<int>& arr2) {
-        // code here
-        priority_queue<int,vector<int>,greater<int>>pq;
-        for(int i=0; i<arr1.size(); i++){
-            pq.push(arr1[i]);
+    int kthElement(vector<int>& a, vector<int>& b, int k) {
+        int x = 0;
+        int y = 0;
+        int val = -1;
+        while(k--){
+            if(x < a.size() && (y >= b.size() || a[x]<=b[y])) val= a[x], x++;
+            else if(y<b.size()) val = b[y], y++;
         }
-        for(int i=0; i<arr2.size(); i++){
-            pq.push(arr2[i]);
-        }
-        for(int i=1; i<=k; i++){
-            if(i==k){
-                return pq.top();
-            }
-            else{
-                pq.pop();
-            }
-        }
+        return val;
     }
 };
-
-
 
 //{ Driver Code Starts.
 
@@ -43,22 +33,22 @@ int main() {
         cin.ignore();
         string input;
         int num;
-        vector<int> arr1, arr2;
+        vector<int> a, b;
 
         getline(cin, input);
         stringstream s2(input);
         while (s2 >> num) {
-            arr1.push_back(num);
+            a.push_back(num);
         }
 
         getline(cin, input);
         stringstream s3(input);
         while (s3 >> num) {
-            arr2.push_back(num);
+            b.push_back(num);
         }
 
         Solution ob;
-        cout << ob.kthElement(k, arr1, arr2) << endl;
+        cout << ob.kthElement(a, b, k) << endl << "~\n";
     }
     return 0;
 }
