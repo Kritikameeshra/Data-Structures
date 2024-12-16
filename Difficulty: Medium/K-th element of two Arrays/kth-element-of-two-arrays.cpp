@@ -4,8 +4,6 @@ using namespace std;
 
 
 // } Driver Code Ends
-
-
 class Solution {
   public:
     int kthElement(vector<int>& a, vector<int>& b, int k) {
