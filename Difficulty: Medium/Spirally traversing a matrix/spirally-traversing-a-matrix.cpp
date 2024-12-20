@@ -6,7 +6,6 @@ using namespace std;
 // } Driver Code Ends
 
 
-
 class Solution {
   public:
     vector<int> spirallyTraverse(vector<vector<int> > &matrix) {
