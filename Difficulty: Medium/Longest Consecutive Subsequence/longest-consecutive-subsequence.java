@@ -28,28 +28,24 @@ public class Main {
 class Solution {
 
     // Function to return length of longest subsequence of consecutive integers.
-    public int longestConsecutive(int[] a) {
+    public int longestConsecutive(int[] arr) {
         // code here
-        HashSet<Integer> set = new HashSet<>();
-        int min = Integer.MAX_VALUE;
-        int max = -1;
-        for(int i : a){
-            min = Math.min(i,min);
-            max = Math.max(i,max);
-            set.add(i);
+        HashSet<Integer> hashSet = new HashSet<>();
+        for(int el: arr) {
+            hashSet.add(el);
         }
-        int m = 1;
-        int count = 1;
-        for(int i = min; i < max; i++){
-            if(set.contains(i+1)){
-                count+=1;
+        int best = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(!hashSet.contains(arr[i]-1)) {
+                int j = arr[i] + 1;
+                while(hashSet.contains(j)) {
+                    j += 1;
+                }
+                best = Math.max(best, j-arr[i]);
             }
-            else{
-                m = Math.max(m,count);
-                count=0;
-            }
+            
         }
-        int res = Math.max(count, m);
-        return res;
+        return best;
+        
     }
 }
