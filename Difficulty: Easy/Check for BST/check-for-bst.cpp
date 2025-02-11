@@ -18,6 +18,7 @@ struct Node {
 
 // } Driver Code Ends
 
+
 class Solution {
   public:
     // Function to check whether a Binary Tree is BST or not.
