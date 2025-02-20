@@ -4,8 +4,6 @@ using namespace std;
 
 
 // } Driver Code Ends
-
-
 class Solution {
   public:
     vector<double> getMedian(vector<int> &arr) {
