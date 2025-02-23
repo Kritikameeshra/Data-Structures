@@ -7,7 +7,7 @@ using namespace std;
 class Solution {
   public:
     // Function to find the next greater element for each element of the array.
-    vector<int> nextLargerElement(vector<int>& arr) {
+     vector<int> nextLargerElement(vector<int>& arr) {
         // code here
         
         //optimised approach
