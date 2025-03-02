@@ -1,56 +1,66 @@
 //{ Driver Code Starts
-// Initial Template for C++
 #include <bits/stdc++.h>
 using namespace std;
 
 
 // } Driver Code Ends
-// User function template for C++
 
 class Solution {
   public:
-    // Function to find maximum of each subarray of size k.
-    vector<int> max_of_subarrays(int k, vector<int> &arr) {
+    vector<int> maxOfSubarrays(vector<int>& arr, int k) {
+       int l=0,r=k-1;
+       int n=arr.size();
+       
        deque<int> dq;
-       vector<int> ans;
-       for(int i=0;i<arr.size();i++){
-           if(dq.size() && dq.front()==i-k)dq.pop_front();
-           while(dq.size() && arr[i]>=arr[dq.back()])dq.pop_back();
-           dq.push_back(i);
-           if(i>=k-1){
-               ans.push_back(arr[dq.front()]);
-           }
-       }
-       return ans;
+       vector<int> res;
+     
+      for(int i=0;i<n;i++){
+         
+         if(!dq.empty() && dq.front()==i-k) dq.pop_front();
+         
+         while(!dq.empty() && arr[dq.back()]<=arr[i]) dq.pop_back();
+         
+         dq.push_back(i);
+         
+         if(i>=k-1) res.push_back(arr[dq.front()]);
+      }
+      
+      return res;
+      
+        
     }
 };
+
 
 //{ Driver Code Starts.
 
 int main() {
-
     int t;
     cin >> t;
-    cin.ignore();
+    cin.ignore(); // Ignore newline character after t
 
     while (t--) {
-
-        string ks;
-        getline(cin, ks);
-        int k = stoi(ks);
         vector<int> arr;
-        string input;
-        getline(cin, input);
-        stringstream ss(input);
-        int number;
-        while (ss >> number) {
-            arr.push_back(number);
+        int k;
+        string inputLine;
+
+        getline(cin, inputLine); // Read the array input as a line
+        stringstream ss(inputLine);
+        int value;
+        while (ss >> value) {
+            arr.push_back(value);
         }
+
+        cin >> k;
+        cin.ignore(); // Ignore newline character after k input
+
         Solution obj;
-        vector<int> res = obj.max_of_subarrays(k, arr);
+        vector<int> res = obj.maxOfSubarrays(arr, k);
         for (int i = 0; i < res.size(); i++)
             cout << res[i] << " ";
         cout << endl;
+        cout << "~"
+             << "\n";
     }
 
     return 0;
