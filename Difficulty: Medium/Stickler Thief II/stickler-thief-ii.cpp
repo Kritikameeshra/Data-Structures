@@ -7,29 +7,23 @@ using namespace std;
 
 class Solution {
   public:
-    int solve(vector<int>&arr,int idx,bool& first,vector<int>& dp){
-        if(arr.size()<=idx){
-            return 0;
-        }
-        if(first && idx==arr.size()-1){
-            return 0;
-        }
-        if(dp[idx]!=-1){
-            return dp[idx];
-        }
-        int include = arr[idx]+solve(arr,idx+2,first,dp);
-        int noinclude = solve(arr,idx+1,first,dp);
-        return dp[idx] = max(include,noinclude);
+    int solve(vector<int>&arr,int i,vector<int>&dp){
+        if(i>=arr.size()) return 0;
+        if(dp[i]!=-1) return dp[i];
+        int take=0,nottake=0;
+        take=arr[i]+solve(arr,i+2,dp);
+        nottake=solve(arr,i+1,dp);
+        return dp[i]=max(take,nottake);
     }
     int maxValue(vector<int>& arr) {
         // your code here
-        vector<int>dp1(arr.size()+1,-1);
-        bool first = true;
-        int take = arr[0]+solve(arr,2,first,dp1);
-        first = false;
-        vector<int>dp2(arr.size()+1,-1);
-        int notake = solve(arr,1,first,dp2);
-        return max(take,notake);
+        int n=arr.size();
+        vector<int>dp(n+1,-1);
+        int second=solve(arr,1,dp);
+        arr.pop_back();
+        dp=vector<int>(n,-1);
+        int first=solve(arr,0,dp);
+        return max(first,second);
     }
 };
 
